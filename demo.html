@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-	<title>作品集</title>
+	<title>履歷｜吳昇洋</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="mycss.css">
@@ -26,11 +27,13 @@ body{
     width: 100%;
 	padding: 16px;
 }
+
 .row:after {
     content: "";
     clear: both;
     display: block;
 }
+
 .container {
 	position: relative;
 	top: 40px; /* top height */
@@ -44,10 +47,12 @@ body{
 a {
 	text-decoration: none;
 }
+
 img {
 	width: 100%;
 	height: auto;
 }
+
 @media only screen and (min-width: 768px) {
 	.col-1 {width: 8.33%;}
 	.col-2 {width: 16.66%;}
@@ -66,18 +71,22 @@ img {
 		padding: 32px;
 	}
 }
+
 .hidden-title {
 	display:none;
 }
+
 /* font */
 p {
 	font-size: 1.2rem;
 	line-height: 1.5em;
 }
+
 ol ,ul {
 	font-size: 1.2rem;
 	line-height: 1.5em;
 }
+
 h6{
 	font-size: 1.2rem;
 }
@@ -96,6 +105,7 @@ h2{
 h1{
 	font-size: 2.55rem;
 }
+
 #top {
 	position: fixed;
 	top: 0; 
@@ -158,6 +168,7 @@ h1{
 	background-color: #717aaa;
 	color: white;
 }
+
 #nav-section{
 	padding: 0;
 	visibility: hidden;
@@ -175,6 +186,7 @@ h1{
 	opacity: 0;
 	background-color: rgba(113, 122, 170, 0);
 }
+
 #nav-section ul {
 	margin: 0;
     padding: 0;
@@ -196,6 +208,7 @@ h1{
 	border-bottom: 1px solid grey;
 	background-color: #BBC5FB;
 }
+
 @media only screen and (min-width: 768px) {
 	#top {
 		height: 68px;
@@ -245,6 +258,7 @@ h1{
 		padding: 8px 20px 8px 20px;
 	}
 }
+
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexming.css);
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700|Lora:400,700);
@@ -254,6 +268,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lora', 'cwTeXMing', serif;
 }
+
 section a::before{
 	content:"[";
 }
@@ -273,9 +288,11 @@ section a::after{
 		float: right;
 	}
 }
+
 .disappear {
   display:none;
 }
+
 .cursor{
   cursor:pointer;
 }
@@ -286,7 +303,7 @@ section a::after{
 	<h1 class="hidden-title">吳昇洋的網站</h1>
 	<div id="top">
 		<div id="logo-section" class="col-6">
-			<span id="logo">作品集</span>
+			<span id="logo">作品</span>
 			<!--<span id="lang-span"><a id="lang-button" href="#">English</a></span>-->
 			<button id="menu-button" onclick=clickMenuButton()>選單</button>
 			<!--<script>
@@ -298,7 +315,8 @@ section a::after{
 			<ul>
 				<!--<a href="/~r01525014/index-zh.html"><li>履歷</li></a>
 				<a href="/~r01525014/projects-zh.html"><li>專案</li></a>-->
-                <a href="https://www.google.com.tw/"><li class="cursor">返回</li></a>
+				<li id="contact-me-li" class="cursor">聯絡我</li></a>
+				<a href="/Personal_CV/demo.html"><li id="contact-me-li" class="cursor">作品集</li></a>
 			</ul>
 		</nav>
 	</div>
@@ -470,7 +488,7 @@ section a::after{
                                 <li>Android APP 開發</li>
 								<li>物件導向程式設計</li>
 								<li>程式語言： Java, C/C++, Matlab</li>
-								<li>靜態網頁： HTML, CSS, Javascript, jQuery  <a href="/Personal_CV/demo.html">作品集</a></li>			
+								<li>靜態網頁： HTML, CSS, Javascript, jQuery <a href="/Personal_CV/demo.html">作品集</a></li>			
 							</ul>
 					</section>
 				</div>
