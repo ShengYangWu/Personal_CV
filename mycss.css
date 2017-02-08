@@ -1,0 +1,288 @@
+*{
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.5em 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	background-color: #EDE7DE;
+}
+[class*="col-"] {
+    float: left;
+    width: 100%;
+	padding: 16px;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.container {
+	position: relative;
+	top: 40px; /* top height */
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 10px;
+	box-shadow: 1px 1px 4px black;
+	background-color: #f3f2ee;
+}
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+	.container {
+		top: 68px; /* top height */
+		padding: 32px;
+	}
+}
+
+.hidden-title {
+	display:none;
+}
+
+/* font */
+p {
+	font-size: 1.2rem;
+	line-height: 1.5em;
+}
+
+ol ,ul {
+	font-size: 1.2rem;
+	line-height: 1.5em;
+}
+
+h6{
+	font-size: 1.2rem;
+}
+h5{
+	font-size: 1.3rem;
+}
+h4{
+	font-size: 1.4rem;
+}
+h3{
+	font-size: 1.6rem;
+}
+h2{
+	font-size: 2.10rem;
+}
+h1{
+	font-size: 2.55rem;
+}
+
+#top {
+	position: fixed;
+	top: 0; 
+	right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+	width: 100%;
+	max-width: 1024px;
+	height: 40px;
+	z-index: 100;
+	box-shadow: 2px 0px 4px grey;
+	background-color: #BBC5FB;
+}
+#top a{
+    color: black;
+}
+#top li{
+    font-size: 1.4rem;
+}
+/* logo part*/
+#logo-section {
+	padding: 0;
+	height: 100%;
+}
+#logo-section:before {
+	content:" ";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+#logo-section span {
+	margin-left: 6px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+#logo {
+	font-size: 1.8rem;
+}
+#lang-span {
+	font-size: 1rem;
+}
+/* button */
+#menu-button {
+	display: block;
+	position: relative;
+	z-index: 100;
+	float: right;
+	width: 4rem;
+	height: 85px;
+	font-size: 1rem;
+	font-family: 'Noto Sans TC', sans-serif;
+	border: none;
+	border-radius: 5px 10px 5px 35px;
+	background: linear-gradient(to right, rgba(162,175,243,0), rgba(162,175,243,1));
+	transition: background 0.5s;
+}
+#menu-button.menu-show {
+	background: none;
+	background-color: #717aaa;
+	color: white;
+}
+
+#nav-section{
+	padding: 0;
+	visibility: hidden;
+	opacity: 0;
+	background-color: rgba(113, 122, 170, 0);
+	transition: opacity 0.1s, background-color 0.3s;
+}
+#nav-section.menu-show {
+	visibility: visible;
+	opacity: 1;
+	background-color: rgba(113, 122, 170, 1);
+}
+#nav-section.menu-hide {
+	visibility: hidden;
+	opacity: 0;
+	background-color: rgba(113, 122, 170, 0);
+}
+
+#nav-section ul {
+	margin: 0;
+    padding: 0;
+	list-style-type: none;
+	height: 150vh;
+	box-shadow: 2px 0px 4px grey;
+}
+#nav-section ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#nav-section li {
+    float: left;
+    width: 50%;
+	text-align: center;
+	padding: 24px;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	background-color: #BBC5FB;
+}
+
+@media only screen and (min-width: 768px) {
+	#top {
+		height: 68px;
+	}
+	/* logo */
+	#logo-section {
+		padding: 0 15px;
+	}
+	/* button */
+	#menu-button  {
+		display: none;
+	}
+	#logo-section {
+	}
+	#logo {
+		font-size: 2.8rem;
+	}
+	#lang-span {
+	}
+	
+	/* navigation bar */
+	#nav-section:before {
+		content: "";
+		display: inline-block;
+		vertical-align: bottom;
+		height: 100%;
+	}
+	#nav-section {
+		text-align: right;
+		display: inline-block;
+		height: 100%;
+	}
+	#nav-section , 
+	#nav-section.menu-show, #nav-section.menu-hide{
+		visibility: visible;
+		opacity: 1;
+	}
+	#nav-section ul {
+		display: inline-block;
+		vertical-align: bottom;
+		height: initial;	
+	}
+	#nav-section li {
+		display: inline-block;
+		width: initial;
+		padding: 8px 20px 8px 20px;
+	}
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexming.css);
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700|Lora:400,700);
+html {
+	font-family: 'Open Sans', 'cwTeXYen', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lora', 'cwTeXMing', serif;
+}
+
+section a::before{
+	content:"[";
+}
+section a::after{
+	content:"]";
+}
+.year {
+	/*color: grey;*/
+}
+#profile {
+	width: 33%;
+	float: none;
+}
+@media only screen and (min-width: 768px) {
+	#profile {
+		padding: 16px;
+		float: right;
+	}
+}
+
+.disappear {
+  display:none;
+}
+
+#contact-me-li, #contact-me-p{
+  cursor:pointer;
+}
