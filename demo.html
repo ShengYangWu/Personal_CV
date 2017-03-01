@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh">
 <head>
 	<title>作品集</title>
@@ -267,7 +267,9 @@ html {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lora', 'cwTeXMing', serif;
 }
-
+.prettyprint {
+            font-family: sans-serif;
+}
 section a::before{
 	content:"[";
 }
@@ -330,10 +332,87 @@ img {
 	</div>
 	<div id="main-container" class="container">
 		<article>
+            <section>
+			  <div class="row">
+				<section class="col-12">
+                    <h3>小型JavaScript函數庫: repeatJS</h3>
+					<p>repeatJS 提供start(), stop(), restart(), addRepeats()來操控你的function <a href="https://github.com/ShengYangWu/repeatJS">github連結</a></p>
+                    <pre class="prettyprint">//Example1
+                    
+var theFun = function () {
+    // Do something
+};
+
+var test = repeat(theFun, 1000);
+
+test.start(); // will run the theFun every second.
+test.stop(); // will stop the theFun from running.
+test.restart(); // will stop, then start the function.
+	               </pre>
+                    
+                    <pre class="prettyprint">//Example2
+                    
+var reinit = function () {
+    // Clean up
+};
+
+var test2 = repeat(theFun, 1000, reinit);
+
+test2.start();
+test2.restart(); // stops theFun, runs reinit, then starts theFun again
+	               </pre>
+                    
+                    <pre class="prettyprint">//Example3
+                    
+var theFun = function () {
+    // Do something
+};
+
+var test = repeat(theFun, 1000);
+
+test.start(10); // will run the theFun every second for 10 times.
+test.addRepeats(5, false);// will run theFun 5 times after theFun run 10 times.
+	               </pre>
+				</section>
+			  </div>
+			</section>
+            
+            <section>
+			  <div class="row">
+				<section class="col-12">
+                    <h3>小型JavaScript函數庫: makeHtmlElement</h3>
+					<p>使用JavaScript的method chain來建造html element <a href="https://github.com/ShengYangWu/makeHtmlElement">github連結</a></p>
+                    <pre class="prettyprint">//Example
+                    
+var test = html()
+    .add('div', {className: 'container', data: { info: 'extraInformation' }})
+        .contains('div', {className: 'header'})
+            .contains('h5', {className: 'headerTitle', text: 'This is a header'}).end()
+        .and('div', {className: 'content'})
+            .contains('p', {text: 'This is the content'}).end()
+        .end()
+    .build();
+	               </pre>
+                    <p>will return:</p>
+                    <code class="prettyprint">
+&lt;div class=&quot;container&quot; data-info=&quot;extraInformation&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;header&quot;&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5 class=&quot;headerTitle&quot;&gt;This is a header&lt;/h5&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;content&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is the content&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/div&gt;
+</code>
+				</section>
+			  </div>
+			</section>
+
+            
 			<section>
 			  <div class="row">
 				<section class="col-12">
-                    <h3>待辦事項清單 (AngularJS框架)</h3>
+                    <h3>待辦事項清單</h3>
 					<p>可以管理自己待辦事項的簡易網站 <a href="https://shengyangwu.github.io/ToDoListWithAngular/">連結</a></p>
                     <img src="http://i.imgur.com/3CmSl6I.jpg"/>
 				</section>
@@ -362,5 +441,6 @@ img {
 			
 	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
 	<script src='myjs.js' charset="big5"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>        
 </body>
 </html>
