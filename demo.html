@@ -267,8 +267,8 @@ html {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lora', 'cwTeXMing', serif;
 }
-.prettyprint {
-            font-family: sans-serif;
+.prettyprint, .span{
+    font-family: '';
 }
 section a::before{
 	content:"[";
@@ -335,7 +335,7 @@ img {
             <section>
 			  <div class="row">
 				<section class="col-12">
-                    <h3>小型JavaScript函數庫: repeatJS</h3>
+                    <h3 class="span">Mini JavaScript Library: repeatJS</h3>
 					<p>repeatJS 提供start(), stop(), restart(), addRepeats()來操控你的function <a href="https://github.com/ShengYangWu/repeatJS">github連結</a></p>
                     <pre class="prettyprint">//Example1
                     
@@ -380,7 +380,7 @@ test.addRepeats(5, false);// will run theFun 5 times after theFun run 10 times.
             <section>
 			  <div class="row">
 				<section class="col-12">
-                    <h3>小型JavaScript函數庫: makeHtmlElement</h3>
+                    <h3 class="span">Mini JavaScript Library: makeHtmlElementJS</h3>
 					<p>使用JavaScript的method chain來建造html element <a href="https://github.com/ShengYangWu/makeHtmlElement">github連結</a></p>
                     <pre class="prettyprint">//Example
                     
@@ -403,7 +403,13 @@ var test = html()
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is the content&lt;/p&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
 &lt;/div&gt;
-</code>
+                    </code>
+                    <p>Usage:</p>
+                    <pre class="prettyprint">
+.add(htmlTag, objectOfAttribute);      //add new html element
+.contains(htmlTag, objectOfAttribute); //add child html element
+.end()                                 //back to parent node       
+                    </pre>
 				</section>
 			  </div>
 			</section>
@@ -432,7 +438,7 @@ var test = html()
             <section>
 			  <div class="row">
 				<section class="col-12">
-                    <h3>運用Bootstrap實作的靜態網站</h3>
+                    <h3>運用<span class="span">Bootstrap</span>實作的靜態網站</h3>
 					<p>使用了Grid system, Forms, Button, Glyphicons, Input groups, Navbar, ScrollSpy這些元件 <a href="https://shengyangwu.github.io/Bootstarp/">連結</a></p>
                     <img src="http://i.imgur.com/0KrNGiR.jpg" />
 				</section>
