@@ -388,7 +388,7 @@ var test = html()
     .add('div', {className: 'container', data: { info: 'extraInformation' }})
         .contains('div', {className: 'header'})
             .contains('h5', {className: 'headerTitle', text: 'This is a header'}).end()
-        .and('div', {className: 'content'})
+        .add('div', {className: 'content'})
             .contains('p', {text: 'This is the content'}).end()
         .end()
     .build();
